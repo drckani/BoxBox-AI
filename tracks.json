@@ -16,8 +16,15 @@
     "overtakingDifficulty": 4,
     "averageOvertakes": 31,
     "pitLaneLoss": 22.0,
-    "safetyCarProbability": 0.70,
-    "vscProbability": 0.30
+    "safetyCarProbability": 0.7,
+    "vscProbability": 0.3,
+    "tyre_loss_seconds_per_percent": 0.093,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.21,
+    "twoStopDifficulty": 0.46,
+    "threeStopDifficulty": 0.77,
+    "sc_pit_saving_seconds": 12.1,
+    "pitWindowSize": 3
   },
   {
     "id": "china",
@@ -36,8 +43,15 @@
     "overtakingDifficulty": 3,
     "averageOvertakes": 52,
     "pitLaneLoss": 23.0,
-    "safetyCarProbability": 0.40,
-    "vscProbability": 0.18
+    "safetyCarProbability": 0.4,
+    "vscProbability": 0.18,
+    "tyre_loss_seconds_per_percent": 0.101,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.23,
+    "twoStopDifficulty": 0.5,
+    "threeStopDifficulty": 0.82,
+    "sc_pit_saving_seconds": 12.7,
+    "pitWindowSize": 3
   },
   {
     "id": "japan",
@@ -57,7 +71,14 @@
     "averageOvertakes": 18,
     "pitLaneLoss": 22.0,
     "safetyCarProbability": 0.25,
-    "vscProbability": 0.15
+    "vscProbability": 0.15,
+    "tyre_loss_seconds_per_percent": 0.122,
+    "starting_position_penalty_seconds": 0.116,
+    "oneStopDifficulty": 0.28,
+    "twoStopDifficulty": 0.61,
+    "threeStopDifficulty": 0.95,
+    "sc_pit_saving_seconds": 12.1,
+    "pitWindowSize": 2
   },
   {
     "id": "miami",
@@ -77,14 +98,21 @@
     "averageOvertakes": 59,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.55,
-    "vscProbability": 0.25
+    "vscProbability": 0.25,
+    "tyre_loss_seconds_per_percent": 0.098,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.22,
+    "twoStopDifficulty": 0.49,
+    "threeStopDifficulty": 0.8,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 3
   },
   {
     "id": "canada",
     "name": "Circuit Gilles Villeneuve",
     "country": "Canada",
     "laps": 70,
-    "raceDistanceKm": 305.270,
+    "raceDistanceKm": 305.27,
     "lapLengthKm": 4.361,
     "corners": 14,
     "trackType": "Semi-Street",
@@ -96,8 +124,15 @@
     "overtakingDifficulty": 3,
     "averageOvertakes": 46,
     "pitLaneLoss": 18.0,
-    "safetyCarProbability": 0.80,
-    "vscProbability": 0.30
+    "safetyCarProbability": 0.8,
+    "vscProbability": 0.3,
+    "tyre_loss_seconds_per_percent": 0.087,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.19,
+    "twoStopDifficulty": 0.44,
+    "threeStopDifficulty": 0.73,
+    "sc_pit_saving_seconds": 9.9,
+    "pitWindowSize": 4
   },
   {
     "id": "monaco",
@@ -117,7 +152,14 @@
     "averageOvertakes": 9,
     "pitLaneLoss": 18.5,
     "safetyCarProbability": 0.85,
-    "vscProbability": 0.45
+    "vscProbability": 0.45,
+    "tyre_loss_seconds_per_percent": 0.071,
+    "starting_position_penalty_seconds": 0.14,
+    "oneStopDifficulty": 0.15,
+    "twoStopDifficulty": 0.36,
+    "threeStopDifficulty": 0.63,
+    "sc_pit_saving_seconds": 10.2,
+    "pitWindowSize": 4
   },
   {
     "id": "spain",
@@ -137,7 +179,14 @@
     "averageOvertakes": 24,
     "pitLaneLoss": 21.0,
     "safetyCarProbability": 0.25,
-    "vscProbability": 0.15
+    "vscProbability": 0.15,
+    "tyre_loss_seconds_per_percent": 0.119,
+    "starting_position_penalty_seconds": 0.108,
+    "oneStopDifficulty": 0.27,
+    "twoStopDifficulty": 0.6,
+    "threeStopDifficulty": 0.93,
+    "sc_pit_saving_seconds": 11.6,
+    "pitWindowSize": 2
   },
   {
     "id": "austria",
@@ -156,8 +205,15 @@
     "overtakingDifficulty": 3,
     "averageOvertakes": 46,
     "pitLaneLoss": 19.0,
-    "safetyCarProbability": 0.40,
-    "vscProbability": 0.20
+    "safetyCarProbability": 0.4,
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.098,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.22,
+    "twoStopDifficulty": 0.49,
+    "threeStopDifficulty": 0.8,
+    "sc_pit_saving_seconds": 10.5,
+    "pitWindowSize": 3
   },
   {
     "id": "great_britain",
@@ -176,8 +232,15 @@
     "overtakingDifficulty": 4,
     "averageOvertakes": 37,
     "pitLaneLoss": 20.5,
-    "safetyCarProbability": 0.30,
-    "vscProbability": 0.18
+    "safetyCarProbability": 0.3,
+    "vscProbability": 0.18,
+    "tyre_loss_seconds_per_percent": 0.125,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.29,
+    "twoStopDifficulty": 0.62,
+    "threeStopDifficulty": 0.97,
+    "sc_pit_saving_seconds": 11.3,
+    "pitWindowSize": 2
   },
   {
     "id": "belgium",
@@ -197,14 +260,21 @@
     "averageOvertakes": 42,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.35,
-    "vscProbability": 0.18
+    "vscProbability": 0.18,
+    "tyre_loss_seconds_per_percent": 0.114,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.26,
+    "twoStopDifficulty": 0.57,
+    "threeStopDifficulty": 0.9,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 3
   },
   {
     "id": "hungary",
     "name": "Hungaroring",
     "country": "Hungary",
     "laps": 70,
-    "raceDistanceKm": 306.630,
+    "raceDistanceKm": 306.63,
     "lapLengthKm": 4.381,
     "corners": 14,
     "trackType": "Permanent",
@@ -217,7 +287,14 @@
     "averageOvertakes": 14,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.35,
-    "vscProbability": 0.20
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.106,
+    "starting_position_penalty_seconds": 0.132,
+    "oneStopDifficulty": 0.24,
+    "twoStopDifficulty": 0.53,
+    "threeStopDifficulty": 0.85,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 3
   },
   {
     "id": "netherlands",
@@ -237,15 +314,21 @@
     "averageOvertakes": 16,
     "pitLaneLoss": 20.5,
     "safetyCarProbability": 0.35,
-    "vscProbability": 0.20
-  }
-  ,
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.109,
+    "starting_position_penalty_seconds": 0.124,
+    "oneStopDifficulty": 0.25,
+    "twoStopDifficulty": 0.54,
+    "threeStopDifficulty": 0.87,
+    "sc_pit_saving_seconds": 11.3,
+    "pitWindowSize": 3
+  },
   {
     "id": "italy",
     "name": "Autodromo Nazionale Monza",
     "country": "Italy",
     "laps": 53,
-    "raceDistanceKm": 306.720,
+    "raceDistanceKm": 306.72,
     "lapLengthKm": 5.793,
     "corners": 11,
     "trackType": "Permanent",
@@ -257,8 +340,15 @@
     "overtakingDifficulty": 2,
     "averageOvertakes": 52,
     "pitLaneLoss": 24.0,
-    "safetyCarProbability": 0.30,
-    "vscProbability": 0.15
+    "safetyCarProbability": 0.3,
+    "vscProbability": 0.15,
+    "tyre_loss_seconds_per_percent": 0.085,
+    "starting_position_penalty_seconds": 0.076,
+    "oneStopDifficulty": 0.19,
+    "twoStopDifficulty": 0.42,
+    "threeStopDifficulty": 0.72,
+    "sc_pit_saving_seconds": 13.2,
+    "pitWindowSize": 4
   },
   {
     "id": "azerbaijan",
@@ -278,7 +368,14 @@
     "averageOvertakes": 47,
     "pitLaneLoss": 20.5,
     "safetyCarProbability": 0.75,
-    "vscProbability": 0.35
+    "vscProbability": 0.35,
+    "tyre_loss_seconds_per_percent": 0.079,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.17,
+    "twoStopDifficulty": 0.4,
+    "threeStopDifficulty": 0.68,
+    "sc_pit_saving_seconds": 11.3,
+    "pitWindowSize": 4
   },
   {
     "id": "singapore",
@@ -286,7 +383,7 @@
     "country": "Singapore",
     "laps": 62,
     "raceDistanceKm": 306.143,
-    "lapLengthKm": 4.940,
+    "lapLengthKm": 4.94,
     "corners": 19,
     "trackType": "Street",
     "trackTemperature": "Hot",
@@ -298,7 +395,14 @@
     "averageOvertakes": 22,
     "pitLaneLoss": 28.0,
     "safetyCarProbability": 0.95,
-    "vscProbability": 0.50
+    "vscProbability": 0.5,
+    "tyre_loss_seconds_per_percent": 0.103,
+    "starting_position_penalty_seconds": 0.124,
+    "oneStopDifficulty": 0.23,
+    "twoStopDifficulty": 0.52,
+    "threeStopDifficulty": 0.83,
+    "sc_pit_saving_seconds": 15.4,
+    "pitWindowSize": 3
   },
   {
     "id": "united_states",
@@ -318,11 +422,18 @@
     "averageOvertakes": 43,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.35,
-    "vscProbability": 0.20
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.111,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.25,
+    "twoStopDifficulty": 0.56,
+    "threeStopDifficulty": 0.88,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 3
   },
   {
     "id": "mexico",
-    "name": "Autódromo Hermanos Rodríguez",
+    "name": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
     "country": "Mexico",
     "laps": 71,
     "raceDistanceKm": 305.354,
@@ -338,7 +449,14 @@
     "averageOvertakes": 62,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.45,
-    "vscProbability": 0.20
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.077,
+    "starting_position_penalty_seconds": 0.076,
+    "oneStopDifficulty": 0.17,
+    "twoStopDifficulty": 0.38,
+    "threeStopDifficulty": 0.67,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 4
   },
   {
     "id": "brazil",
@@ -357,15 +475,22 @@
     "overtakingDifficulty": 4,
     "averageOvertakes": 49,
     "pitLaneLoss": 20.5,
-    "safetyCarProbability": 0.70,
-    "vscProbability": 0.30
+    "safetyCarProbability": 0.7,
+    "vscProbability": 0.3,
+    "tyre_loss_seconds_per_percent": 0.106,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.24,
+    "twoStopDifficulty": 0.53,
+    "threeStopDifficulty": 0.85,
+    "sc_pit_saving_seconds": 11.3,
+    "pitWindowSize": 3
   },
   {
     "id": "las_vegas",
     "name": "Las Vegas Strip Circuit",
     "country": "United States",
     "laps": 50,
-    "raceDistanceKm": 305.880,
+    "raceDistanceKm": 305.88,
     "lapLengthKm": 6.201,
     "corners": 17,
     "trackType": "Street",
@@ -378,7 +503,14 @@
     "averageOvertakes": 68,
     "pitLaneLoss": 20.0,
     "safetyCarProbability": 0.55,
-    "vscProbability": 0.25
+    "vscProbability": 0.25,
+    "tyre_loss_seconds_per_percent": 0.071,
+    "starting_position_penalty_seconds": 0.076,
+    "oneStopDifficulty": 0.15,
+    "twoStopDifficulty": 0.36,
+    "threeStopDifficulty": 0.63,
+    "sc_pit_saving_seconds": 11.0,
+    "pitWindowSize": 4
   },
   {
     "id": "qatar",
@@ -398,7 +530,14 @@
     "averageOvertakes": 35,
     "pitLaneLoss": 21.0,
     "safetyCarProbability": 0.35,
-    "vscProbability": 0.18
+    "vscProbability": 0.18,
+    "tyre_loss_seconds_per_percent": 0.125,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.29,
+    "twoStopDifficulty": 0.62,
+    "threeStopDifficulty": 0.97,
+    "sc_pit_saving_seconds": 11.6,
+    "pitWindowSize": 2
   },
   {
     "id": "abu_dhabi",
@@ -417,8 +556,15 @@
     "overtakingDifficulty": 4,
     "averageOvertakes": 36,
     "pitLaneLoss": 20.5,
-    "safetyCarProbability": 0.30,
-    "vscProbability": 0.15
+    "safetyCarProbability": 0.3,
+    "vscProbability": 0.15,
+    "tyre_loss_seconds_per_percent": 0.087,
+    "starting_position_penalty_seconds": 0.092,
+    "oneStopDifficulty": 0.19,
+    "twoStopDifficulty": 0.44,
+    "threeStopDifficulty": 0.73,
+    "sc_pit_saving_seconds": 11.3,
+    "pitWindowSize": 4
   },
   {
     "id": "bahrain",
@@ -437,15 +583,22 @@
     "overtakingDifficulty": 3,
     "averageOvertakes": 65,
     "pitLaneLoss": 22.5,
-    "safetyCarProbability": 0.40,
-    "vscProbability": 0.20
+    "safetyCarProbability": 0.4,
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.122,
+    "starting_position_penalty_seconds": 0.084,
+    "oneStopDifficulty": 0.28,
+    "twoStopDifficulty": 0.61,
+    "threeStopDifficulty": 0.95,
+    "sc_pit_saving_seconds": 12.4,
+    "pitWindowSize": 2
   },
   {
     "id": "saudi_arabia",
     "name": "Jeddah Corniche Circuit",
     "country": "Saudi Arabia",
     "laps": 50,
-    "raceDistanceKm": 308.450,
+    "raceDistanceKm": 308.45,
     "lapLengthKm": 6.174,
     "corners": 27,
     "trackType": "Street",
@@ -457,8 +610,15 @@
     "overtakingDifficulty": 5,
     "averageOvertakes": 33,
     "pitLaneLoss": 19.5,
-    "safetyCarProbability": 0.80,
-    "vscProbability": 0.40
+    "safetyCarProbability": 0.8,
+    "vscProbability": 0.4,
+    "tyre_loss_seconds_per_percent": 0.098,
+    "starting_position_penalty_seconds": 0.1,
+    "oneStopDifficulty": 0.22,
+    "twoStopDifficulty": 0.49,
+    "threeStopDifficulty": 0.8,
+    "sc_pit_saving_seconds": 10.7,
+    "pitWindowSize": 3
   },
   {
     "id": "imola",
@@ -477,7 +637,14 @@
     "overtakingDifficulty": 8,
     "averageOvertakes": 17,
     "pitLaneLoss": 27.0,
-    "safetyCarProbability": 0.40,
-    "vscProbability": 0.20
+    "safetyCarProbability": 0.4,
+    "vscProbability": 0.2,
+    "tyre_loss_seconds_per_percent": 0.101,
+    "starting_position_penalty_seconds": 0.124,
+    "oneStopDifficulty": 0.23,
+    "twoStopDifficulty": 0.5,
+    "threeStopDifficulty": 0.82,
+    "sc_pit_saving_seconds": 14.9,
+    "pitWindowSize": 3
   }
 ]
