@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Dry",
+    "paceModifier": 1.0,
+    "wearModifier": 1.0,
+    "allowedTyres": ["Soft", "Medium", "Hard"]
+  },
+  {
+    "name": "Wet",
+    "paceModifier": 0.75,
+    "wearModifier": 0.85,
+    "allowedTyres": ["Intermediate", "Wet"]
+  }
+]
