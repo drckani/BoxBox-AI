@@ -1,11 +1,16 @@
+"""Read the JSON datasets that drive the strategy engine.
+
+The data files live next to this module, so the path is resolved from the
+file itself rather than from the current working directory. That keeps
+``streamlit run main.py`` working from any directory.
+"""
+
 import json
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent / "json"
+DATA_DIR = Path(__file__).resolve().parent
 
-print("USING DATA LOADER:", __file__)
-print("DATA_DIR =", DATA_DIR)
-print("Exists =", DATA_DIR.exists())
+
 def load_json(filename):
     with (DATA_DIR / filename).open("r", encoding="utf-8") as file:
         return json.load(file)
@@ -24,7 +29,7 @@ def get_drivers():
 
 
 def get_teams():
-    return load_json("teams.json")
+    return load_json("teams.json")["teams"]
 
 
 def get_compounds():
@@ -38,22 +43,6 @@ def get_weather():
 # -----------------------------
 # SINGLE OBJECT HELPERS
 # -----------------------------
-
-def get_track(track_id):
-    tracks = get_tracks()
-    return next(
-        (track for track in tracks if track["id"] == track_id),
-        None,
-    )
-
-
-def get_driver(driver_id):
-    drivers = get_drivers()
-    return next(
-        (driver for driver in drivers if driver["id"] == driver_id),
-        None,
-    )
-
 
 def get_team(team_id):
     teams = get_teams()
