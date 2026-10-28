@@ -1,0 +1,376 @@
+{
+  "_meta": {
+    "source": "f1dailybrief.com/seasons/2026 (as of round 18, 26 Oct 2026)",
+    "ratings": "null = not sourced; /10 attribute ratings are subjective and must be authored"
+  },
+  "drivers": [
+    {
+      "id": "antonelli",
+      "name": "Andrea Kimi Antonelli",
+      "team": "mercedes",
+      "points": 365,
+      "wins": 9,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 10,
+        "tyre_management": 8,
+        "overtaking": 9,
+        "wet_weather": 8,
+        "consistency": 9,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "russell",
+      "name": "George Russell",
+      "team": "mercedes",
+      "points": 242,
+      "wins": 3,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 9,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "hamilton",
+      "name": "Lewis Hamilton",
+      "team": "ferrari",
+      "points": 241,
+      "wins": 1,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 9,
+        "tyre_management": 10,
+        "overtaking": 9,
+        "wet_weather": 10,
+        "consistency": 9,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "max_verstappen",
+      "name": "Max Verstappen",
+      "team": "red_bull",
+      "points": 236,
+      "wins": 2,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 10,
+        "tyre_management": 9,
+        "overtaking": 10,
+        "wet_weather": 9,
+        "consistency": 9,
+        "aggression": 9
+      }
+    },
+    {
+      "id": "leclerc",
+      "name": "Charles Leclerc",
+      "team": "ferrari",
+      "points": 233,
+      "wins": 1,
+      "ratings": {
+        "qualifying": 10,
+        "race_pace": 9,
+        "tyre_management": 8,
+        "overtaking": 10,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "norris",
+      "name": "Lando Norris",
+      "team": "mclaren",
+      "points": 211,
+      "wins": 2,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 9,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "piastri",
+      "name": "Oscar Piastri",
+      "team": "mclaren",
+      "points": 144,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 9,
+        "tyre_management": 9,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 9,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "hadjar",
+      "name": "Isack Hadjar",
+      "team": "red_bull",
+      "points": 105,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 7,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 7,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "lawson",
+      "name": "Liam Lawson",
+      "team": "rb",
+      "points": 77,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 7,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 7,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "gasly",
+      "name": "Pierre Gasly",
+      "team": "alpine",
+      "points": 42,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "lindblad",
+      "name": "Arvid Lindblad",
+      "team": "rb",
+      "points": 38,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 7,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 7,
+        "aggression": 9
+      }
+    },
+    {
+      "id": "colapinto",
+      "name": "Franco Colapinto",
+      "team": "alpine",
+      "points": 27,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 7,
+        "race_pace": 7,
+        "tyre_management": 7,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 6,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "bearman",
+      "name": "Oliver Bearman",
+      "team": "haas",
+      "points": 23,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 7,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 7,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "hulkenberg",
+      "name": "Nico Hulkenberg",
+      "team": "audi",
+      "points": 13,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 9,
+        "aggression": 6
+      }
+    },
+    {
+      "id": "bortoleto",
+      "name": "Gabriel Bortoleto",
+      "team": "audi",
+      "points": 10,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 7,
+        "race_pace": 7,
+        "tyre_management": 8,
+        "overtaking": 7,
+        "wet_weather": 7,
+        "consistency": 7,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "alonso",
+      "name": "Fernando Alonso",
+      "team": "aston_martin",
+      "points": 7,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 9,
+        "race_pace": 9,
+        "tyre_management": 10,
+        "overtaking": 10,
+        "wet_weather": 10,
+        "consistency": 9,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "ocon",
+      "name": "Esteban Ocon",
+      "team": "haas",
+      "points": 7,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 8
+      }
+    },
+    {
+      "id": "sainz",
+      "name": "Carlos Sainz",
+      "team": "williams",
+      "points": 7,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 9,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 9,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "albon",
+      "name": "Alexander Albon",
+      "team": "williams",
+      "points": 5,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 7
+      }
+    },
+    {
+      "id": "tsunoda",
+      "name": "Yuki Tsunoda",
+      "team": "rb",
+      "points": 1,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 7,
+        "tyre_management": 6,
+        "overtaking": 8,
+        "wet_weather": 7,
+        "consistency": 5,
+        "aggression": 9
+      }
+    },
+    {
+      "id": "perez",
+      "name": "Sergio Perez",
+      "team": "cadillac",
+      "points": 0,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 8,
+        "tyre_management": 8,
+        "overtaking": 8,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 6
+      }
+    },
+    {
+      "id": "stroll",
+      "name": "Lance Stroll",
+      "team": "aston_martin",
+      "points": 0,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 7,
+        "race_pace": 7,
+        "tyre_management": 7,
+        "overtaking": 6,
+        "wet_weather": 7,
+        "consistency": 6,
+        "aggression": 6
+      }
+    },
+    {
+      "id": "bottas",
+      "name": "Valtteri Bottas",
+      "team": "cadillac",
+      "points": 0,
+      "wins": 0,
+      "ratings": {
+        "qualifying": 8,
+        "race_pace": 7,
+        "tyre_management": 9,
+        "overtaking": 7,
+        "wet_weather": 8,
+        "consistency": 8,
+        "aggression": 6
+      }
+    }
+  ]
+}
