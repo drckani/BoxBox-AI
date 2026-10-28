@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "source": "motorsportdash.com/f1/pit-stops",
+    "metric": "pit LANE time lost (entry to exit), not stationary time; medians; as of round 18"
+  },
+  "teams": [
+    {
+      "id": "ferrari",
+      "name": "Ferrari",
+      "median_pit_lane_loss_s": 22.891,
+      "best_pit_lane_loss_s": 15.546,
+      "pit_rank": 1
+    },
+    {
+      "id": "mercedes",
+      "name": "Mercedes",
+      "median_pit_lane_loss_s": 22.971,
+      "best_pit_lane_loss_s": 15.102,
+      "pit_rank": 2
+    },
+    {
+      "id": "alpine",
+      "name": "Alpine F1 Team",
+      "median_pit_lane_loss_s": 23.366,
+      "best_pit_lane_loss_s": 18.003,
+      "pit_rank": 3
+    },
+    {
+      "id": "mclaren",
+      "name": "McLaren",
+      "median_pit_lane_loss_s": 23.413,
+      "best_pit_lane_loss_s": 15.143,
+      "pit_rank": 4
+    },
+    {
+      "id": "red_bull",
+      "name": "Red Bull",
+      "median_pit_lane_loss_s": 23.698,
+      "best_pit_lane_loss_s": 15.212,
+      "pit_rank": 5
+    },
+    {
+      "id": "rb",
+      "name": "RB F1 Team",
+      "median_pit_lane_loss_s": 23.698,
+      "best_pit_lane_loss_s": 16.042,
+      "pit_rank": 6
+    },
+    {
+      "id": "audi",
+      "name": "Audi",
+      "median_pit_lane_loss_s": 23.992,
+      "best_pit_lane_loss_s": 15.275,
+      "pit_rank": 7
+    },
+    {
+      "id": "williams",
+      "name": "Williams",
+      "median_pit_lane_loss_s": 24.202,
+      "best_pit_lane_loss_s": 15.989,
+      "pit_rank": 8
+    },
+    {
+      "id": "aston_martin",
+      "name": "Aston Martin",
+      "median_pit_lane_loss_s": 24.334,
+      "best_pit_lane_loss_s": 17.2,
+      "pit_rank": 9
+    },
+    {
+      "id": "haas",
+      "name": "Haas F1 Team",
+      "median_pit_lane_loss_s": 24.901,
+      "best_pit_lane_loss_s": 16.161,
+      "pit_rank": 10
+    },
+    {
+      "id": "cadillac",
+      "name": "Cadillac F1 Team",
+      "median_pit_lane_loss_s": 25.329,
+      "best_pit_lane_loss_s": 15.093,
+      "pit_rank": 11
+    }
+  ]
+}
