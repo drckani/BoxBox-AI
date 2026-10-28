@@ -1,0 +1,74 @@
+[
+  {
+    "id": "C1",
+    "name": "Hard",
+    "compoundNumber": 1,
+    "baseLife": 48,
+    "baseGrip": 90,
+    "warmupLaps": 3,
+    "cliffPercentage": 0.95,
+    "performanceCurve": [100,100,100,100,100,99,99,99,98,98,97,97,96,95,94]
+  },
+  {
+    "id": "C2",
+    "name": "Hard",
+    "compoundNumber": 2,
+    "baseLife": 40,
+    "baseGrip": 92,
+    "warmupLaps": 3,
+    "cliffPercentage": 0.92,
+    "performanceCurve": [100,100,100,100,99,99,98,98,97,96,95,94,92,90,88]
+  },
+  {
+    "id": "C3",
+    "name": "Medium",
+    "compoundNumber": 3,
+    "baseLife": 30,
+    "baseGrip": 95,
+    "warmupLaps": 2,
+    "cliffPercentage": 0.87,
+    "performanceCurve": [100,100,100,99,98,97,95,93,91,88,84,79,73,66,58]
+  },
+  {
+    "id": "C4",
+    "name": "Soft",
+    "compoundNumber": 4,
+    "baseLife": 22,
+    "baseGrip": 97,
+    "warmupLaps": 1,
+    "cliffPercentage": 0.80,
+    "performanceCurve": [100,100,99,98,96,94,91,87,82,76,69,61,53,45,38]
+  },
+  {
+    "id": "C5",
+    "name": "Soft",
+    "compoundNumber": 5,
+    "baseLife": 16,
+    "baseGrip": 99,
+    "warmupLaps": 1,
+    "cliffPercentage": 0.74,
+    "performanceCurve": [100,100,100,100,99,99,98,97,95,92,88,82,74,62,45]
+  },
+  {
+    "id": "Intermediate",
+    "name": "Intermediate",
+    "compoundNumber": 0,
+    "wet": true,
+    "baseLife": 34,
+    "baseGrip": 86,
+    "warmupLaps": 2,
+    "cliffPercentage": 0.85,
+    "performanceCurve": [100,100,100,100,100,99,99,98,98,96,94,91,87,82,76]
+  },
+  {
+    "id": "Wet",
+    "name": "Wet",
+    "compoundNumber": -1,
+    "wet": true,
+    "baseLife": 40,
+    "baseGrip": 89,
+    "warmupLaps": 2,
+    "cliffPercentage": 0.88,
+    "performanceCurve": [100,100,100,100,100,100,99,99,98,97,95,93,90,86,81]
+  }
+]
