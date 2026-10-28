@@ -40,7 +40,7 @@ REQUEST_TIMEOUT_MS = 30_000
 # of discovering which model is serving right now.
 _last_good_model = None
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parent
 ENV_FILES = (
     PROJECT_ROOT / ".env",
     Path(__file__).resolve().parent / ".env",
@@ -51,7 +51,12 @@ KEY_NAMES = ("GEMINI_API_KEY", "GOOGLE_API_KEY")
 # real key. It is treated as "not configured" rather than being sent to
 # Google, which would fail with a confusing 400 instead of telling you to
 # replace it.
-PLACEHOLDER_KEYS = {"dhruvie"}
+PLACEHOLDER_KEYS = {
+    "your-key-here",
+    "your-key",
+    "your_api_key_here",
+    "replace-me",
+}
 
 ENV_FILE_PATH = PROJECT_ROOT / ".env"
 
@@ -151,7 +156,7 @@ def _key_sources():
 def _configuration_error(placeholder_path):
     if placeholder_path is not None:
         return BriefingSetupError(
-            "Still holding the DHRUVIE placeholder. Open "
+            "Still holding the placeholder key. Open "
             f"{placeholder_path} and replace it with your real Gemini API key, "
             "then reload the app. Create a key at "
             "https://aistudio.google.com/apikey"
