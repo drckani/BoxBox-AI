@@ -1,5 +1,7 @@
 # 🏎️ BoxBox AI
 
+[![CI](https://github.com/drckani/BoxBox-AI/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/drckani/BoxBox-AI/actions/workflows/ci.yml)
+
 An AI-assisted Formula 1 race strategy simulator that models tyre degradation,
 pit stop strategy, race conditions and driver characteristics to recommend a
 race plan.
