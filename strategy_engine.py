@@ -1,4 +1,10 @@
-from data_loader import get_compound, get_compounds, get_weather_type
+from data_loader import (
+    get_compound,
+    get_compounds,
+    get_team,
+    get_teams,
+    get_weather_type,
+)
 from functools import lru_cache
 from itertools import product
 
@@ -62,6 +68,13 @@ TRAFFIC_RELIEF_CAP = 0.40
 
 # Fresh-tyre value a wet-weather specialist extracts, per extra stop.
 WET_SKILL_PER_RATING = 1.50
+
+# Track position traded per extra stop, per grid slot away from the middle of
+# the grid. From the front a stop gives up a place you can defend, so the
+# engine leans towards fewer stops; from the back you trade a place you were
+# unlikely to keep for fresher rubber, so it leans towards more. Without this
+# the starting-position input moved nothing.
+GRID_POSITION_PER_SLOT = 0.30
 
 
 class StrategyEngine:
@@ -307,121 +320,6 @@ class StrategyEngine:
         }
 
     # =====================================================
-    # PLAN GENERATION
-    # =====================================================
-
-    def generate_one_stop(self, starting_tyre, finish_tyre, track):
-        laps = track["laps"]
-        return {
-            "stops": 1,
-            "tyres": [starting_tyre, finish_tyre],
-            "pit_windows": [f"Lap {laps // 2}"],
-        }
-
-    def generate_two_stop(self, start_tyre, middle_tyre, finish_tyre, track):
-        laps = track["laps"]
-        return {
-            "stops": 2,
-            "tyres": [start_tyre, middle_tyre, finish_tyre],
-            "pit_windows": [f"Lap {laps // 3}", f"Lap {(2 * laps) // 3}"],
-        }
-
-    def generate_three_stop(self, tyre1, tyre2, tyre3, tyre4, track):
-        laps = track["laps"]
-        return {
-            "stops": 3,
-            "tyres": [tyre1, tyre2, tyre3, tyre4],
-            "pit_windows": [
-                f"Lap {laps // 4}",
-                f"Lap {laps // 2}",
-                f"Lap {(3 * laps) // 4}",
-            ],
-        }
-
-    def generate_candidate_strategies(
-        self,
-        driver,
-        track,
-        weather,
-        starting_position,
-        soft_compound,
-        medium_compound,
-        hard_compound,
-    ):
-        if weather == "Wet":
-            sequences = [
-                ("Intermediate", "Wet"),
-                ("Wet", "Intermediate"),
-            ]
-        else:
-            compounds = [soft_compound, medium_compound, hard_compound]
-            candidates = []
-
-            for start_tyre in compounds:
-                for finish_tyre in compounds:
-                    if start_tyre == finish_tyre:
-                        continue
-                    candidates.append(
-                        self.generate_one_stop(start_tyre, finish_tyre, track)
-                    )
-
-            for start_tyre in compounds:
-                for middle_tyre in compounds:
-                    for finish_tyre in compounds:
-                        if len({start_tyre, middle_tyre, finish_tyre}) < 3:
-                            continue
-                        candidates.append(
-                            self.generate_two_stop(
-                                start_tyre, middle_tyre, finish_tyre, track
-                            )
-                        )
-
-            for tyre1 in compounds:
-                for tyre2 in compounds:
-                    for tyre3 in compounds:
-                        for tyre4 in compounds:
-                            tyres = [tyre1, tyre2, tyre3, tyre4]
-                            if any(a == b for a, b in zip(tyres, tyres[1:])):
-                                continue
-                            candidates.append(
-                                self.generate_three_stop(*tyres, track)
-                            )
-
-            return candidates
-
-    def score_strategy(
-        self,
-        strategy,
-        driver,
-        track,
-        weather,
-        starting_position,
-    ):
-        return self.evaluate_strategy(
-            strategy,
-            driver,
-            track,
-            weather,
-            starting_position,
-        )
-
-    def pick_best_three(
-        self,
-        strategies,
-        driver,
-        track,
-        weather,
-        starting_position,
-    ):
-        return sorted(
-            strategies,
-            key=lambda strategy: self.score_strategy(
-                strategy, driver, track, weather, starting_position
-            ),
-            reverse=True,
-        )[:3]
-
-    # =====================================================
     # TYRE LIFE MODEL
     # =====================================================
 
@@ -458,7 +356,7 @@ class StrategyEngine:
         if wear_modifier > 0:
             life /= wear_modifier
 
-        rating = driver.get("ratings", {}).get("tyre_management", 5)
+        rating = driver.get("ratings", {}).get("tyre_management", NEUTRAL_RATING)
         life *= max(
             TYRE_MANAGEMENT_LIFE_FLOOR,
             1 + (rating - NEUTRAL_RATING) * TYRE_MANAGEMENT_LIFE_PER_RATING,
@@ -512,7 +410,7 @@ class StrategyEngine:
             self.calculate_tyre_score(strategy, track, weather, driver)
             + self.calculate_track_score(strategy, track)
             + self.calculate_race_score(strategy, track, starting_position)
-            + self.calculate_pit_score(strategy, track)
+            + self.calculate_pit_score(strategy, track, driver)
         )
 
         return -total_penalty + self.calculate_driver_adjustment(
@@ -541,12 +439,12 @@ class StrategyEngine:
         ratings = driver.get("ratings", {})
         extra_stops = max(0, strategy["stops"] - 1)
 
-        tyre_management = ratings.get("tyre_management", 5)
-        aggression = ratings.get("aggression", 5)
-        consistency = ratings.get("consistency", 5)
-        qualifying = ratings.get("qualifying", 5)
-        overtaking = ratings.get("overtaking", 5)
-        pace = ratings.get("race_pace", 5)
+        tyre_management = ratings.get("tyre_management", NEUTRAL_RATING)
+        aggression = ratings.get("aggression", NEUTRAL_RATING)
+        consistency = ratings.get("consistency", NEUTRAL_RATING)
+        qualifying = ratings.get("qualifying", NEUTRAL_RATING)
+        overtaking = ratings.get("overtaking", NEUTRAL_RATING)
+        pace = ratings.get("race_pace", NEUTRAL_RATING)
 
         # Starting near the front makes track position worth defending.
         front_grid_factor = max(0.0, min(1.0, (11 - starting_position) / 10))
@@ -560,6 +458,12 @@ class StrategyEngine:
             * APPETITE_QUALIFYING
         )
         adjustment = extra_stops * appetite
+
+        # Track position itself, independent of the driver's qualifying skill:
+        # front-runners defend, back-markers trade places for fresh tyres.
+        adjustment += (
+            extra_stops * (starting_position - 11) * GRID_POSITION_PER_SLOT
+        )
 
         # A driver who clears traffic quickly loses less by stopping again;
         # one who gets stuck behind a slower car pays more.
@@ -577,7 +481,7 @@ class StrategyEngine:
 
         if str(weather).lower() == "wet":
             adjustment += (
-                (ratings.get("wet_weather", 5) - NEUTRAL_RATING)
+                (ratings.get("wet_weather", NEUTRAL_RATING) - NEUTRAL_RATING)
                 * WET_SKILL_PER_RATING
                 * extra_stops
             )
@@ -605,7 +509,7 @@ class StrategyEngine:
 
         rating = max(
             1,
-            min(10, driver.get("ratings", {}).get("tyre_management", 5)),
+            min(10, driver.get("ratings", {}).get("tyre_management", NEUTRAL_RATING)),
         )
         driver_factor = max(
             TYRE_MANAGEMENT_COST_FLOOR,
@@ -675,8 +579,39 @@ class StrategyEngine:
 
         return position_penalty + stop_penalty - sc_saving
 
-    def calculate_pit_score(self, strategy, track):
-        return strategy["stops"] * track.get("pitLaneLoss", 20.0)
+    def calculate_pit_score(self, strategy, track, driver=None):
+        """Pit lane time for the race, plus this team's own pit-crew delta.
+
+        ``track["pitLaneLoss"]`` is the circuit's time lost from pit entry to
+        exit. ``teams.json`` measures the same quantity per team, so a crew
+        slower than the field median pays extra seconds on every stop. That is
+        what makes the stop count team-dependent as well as circuit-dependent.
+        """
+        base = track.get("pitLaneLoss", 20.0)
+        return strategy["stops"] * (base + self._team_pit_delta(driver))
+
+    def _team_pit_delta(self, driver):
+        """Seconds per stop this driver's team loses against the field median."""
+        team_id = (driver or {}).get("team")
+        if not team_id:
+            return 0.0
+
+        team = get_team(team_id)
+        if not team:
+            return 0.0
+
+        medians = sorted(
+            item["median_pit_lane_loss_s"]
+            for item in get_teams()
+            if "median_pit_lane_loss_s" in item
+        )
+        if not medians:
+            return 0.0
+
+        field_median = medians[len(medians) // 2]
+        delta = team.get("median_pit_lane_loss_s", field_median) - field_median
+        # A pit crew should nudge a strategy, not decide it.
+        return max(-2.0, min(2.0, delta))
 
     def build_stints(self, strategy, track, weather, driver):
         compounds = strategy["tyres"]
@@ -750,11 +685,3 @@ class StrategyEngine:
             )
 
         return stints
-
-    def calculate_driver_score(self, driver, weather, track):
-        ratings = driver.get("ratings", {})
-        return (
-            ratings.get("race_pace", 5) * 8
-            + ratings.get("tyre_management", 5) * 4
-            + ratings.get("consistency", 5) * 2
-        )
